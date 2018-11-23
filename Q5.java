@@ -1,15 +1,36 @@
+interface BinaryArray{
+    default/public/private int[] sort2inOn(arr);
+}
 
-// Interface BinaryArray
-  // Abstract method sort2InOn(arr)
+interface TernaryArray{
+    default/public/private int[] sort3inOn(arr);
+}
 
-// Interface TernaryArray
-  // Abstract method sort3InOn(arr)
-  
-// Class multiInherit(BinaryArray, TernaryArray)
-  // define sort2InOn(arr) and sort3InOn(arr)
-  // define PSVM main()
-    // instantiate the the interface and
-    // sort two arrays by using these methods
+public class HelloWorld implements BinaryArray, TernaryArray{
+    
+    public int[] sort2inOn(int[] arr){
+        // count 0s, 1s in O(n)
+    }
+    
+    public int[] sort3inOn(int[] arr){
+        // count 0s, 1s, 2s in O(n)
+    }
+
+     public static void main(String []args){
+         
+        // declare arrays of (0,1) and (0,1,2)
+        int arr_two[] = new int[5];         //declaration and instantiation 
+        int arr_two[] = {1,0,0,1,1,1,0};    //declaration, instantiation and initialization
+        int arr_three[] = {2,1,0,2,0,0,2,1,1,0,2,1,1,1,0};    //declaration, instantiation and initialization
+        
+        // instantiate two interfaces
+        HelloWorld obj = new HelloWorld();
+       
+       // call two methods and sort them
+        obj.sort2inOn(arr_three)
+        obj.sort3inOn(arr_three)
+     }
+}
     
     
     
